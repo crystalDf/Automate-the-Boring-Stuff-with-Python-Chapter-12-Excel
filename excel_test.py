@@ -30,3 +30,11 @@ print('Row' + str(cell.row) + ', Column ' + cell.column + ' is ' + cell.value)
 print('Cell ' + cell.coordinate + ' is ' + cell.value)
 
 print(sheet['C1'].value)
+
+print(sheet.cell(row=1, column=2))
+print(sheet.cell(row=1, column=2).value)
+for i in range(1, 8, 2):
+    print(i, sheet.cell(row=i, column=2).value)
+
+print(sheet.max_row)
+print(sheet.max_column)
