@@ -50,3 +50,15 @@ print(get_column_letter(900))
 print(get_column_letter(sheet.max_column))
 print(column_index_from_string('A'))
 print(column_index_from_string('AA'))
+
+print(tuple(sheet['A1':'C3']))
+
+for row_of_cell_object in sheet['A1':'C3']:
+    for cell_object in row_of_cell_object:
+        print(cell_object.coordinate, cell_object.value)
+    print('--- End of Row ---')
+
+print(sheet.columns[1])
+
+for cell_object in sheet.columns[1]:
+    print(cell_object.value)
